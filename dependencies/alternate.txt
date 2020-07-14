@@ -1,0 +1,12 @@
+setMode -bscan
+setCable -p auto
+
+Identify -inferir
+identifyMPM
+
+attachflash -position 1 -bpi "28F128J3D"
+assignfiletoattachedflash -position 1 -file "%promDestination%"
+Program -p 1 -dataWidth 8 -rs1 NONE -rs0 NONE -bpionly -e -v -loadfpga
+
+// already done in previous step -> Erase -p 1 -bpionly (Erase BPI Flash)
+// assignFile -p 1 -file "C:/Users/Animatrix/Desktop/fpga_practice/out.bit" (this removes spi)
