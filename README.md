@@ -7,6 +7,8 @@ Simple batch script that enables direct prom file generation and flashing to dev
 device specific configurations can be performed in .\dependencies folder  
 **support currently exists only for the Spartan 3A DSP.**
 
+**for this to run, you'll need to add impact.exe to your PATH (or) insert the absolute path for impact in flash_to_fpga.bat**
+
 HOW TO USE
 ---
     1. Clone repository to folder that doesn't require administrative access
