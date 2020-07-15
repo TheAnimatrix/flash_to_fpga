@@ -64,6 +64,13 @@ mkdir generated;
 fi
 printf "\n"
 sed "s+\[mcs_target_file\]+\"$mcs_file\"+g" dependencies/flash_rom.cmd > generated/flash_rom.cmd 
+#convert linux paths to windows
+if [ $windows == 'true' ]
+then
+echo "override"
+sed -i 's#/c/#C:\\#g' generated/flash_rom.cmd
+sed -i 's#/#\\#g' generated/flash_rom.cmd
+fi
 # flash prom
 echo "${LIME_YELLOW}programming flash using provided file${NORMAL}"
 impact -batch $PWD/generated/flash_rom.cmd
