@@ -1,5 +1,5 @@
 mcs_file=""
-
+windows='false'
 
 #colors
 LIME_YELLOW=$(tput setaf 190)
