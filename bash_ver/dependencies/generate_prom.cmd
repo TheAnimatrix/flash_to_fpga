@@ -36,8 +36,6 @@ addDevice -p 1 -file [flash_bit_file]
 setAttribute -design -attr RSPinMsb -value "1"
 setAttribute -design -attr name -value "0"
 setAttribute -design -attr RSPin -value "00"
-setAttribute -design -attr endAddress -value "fa293"
-setAttribute -design -attr endAddress -value "fa293"
 setMode -pff
 setSubmode -pffbpi
 generate
